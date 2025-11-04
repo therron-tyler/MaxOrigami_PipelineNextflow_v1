@@ -5,11 +5,11 @@
 set -euo pipefail
 
 ### --- USER CONFIG (edit once; reuse everywhere) ---
-SAMPLE=${SAMPLE:-Ly6CHi_Old_WT4}
+SAMPLE=${SAMPLE:-sample}
 OUT=${OUT:-"$PWD/Predict_TADs_${SAMPLE}"}
-CS=${CS:-/home/ttm3567/opt/maxatac/data/mm10/mm10.chrom.sizes}
-SEQ_DIR=${SEQ_DIR:-/projects/b1063/Reference/mm10_perChromosome/dna_sequence}
-MODEL=${MODEL:-/home/ttm3567/b1063/Reference/corigami_data/model_weights/corigami_base.ckpt}
+CS=${CS:-/home/opt/maxatac/data/mm10/mm10.chrom.sizes}
+SEQ_DIR=${SEQ_DIR:-/projects/Reference/mm10_perChromosome/dna_sequence}
+MODEL=${MODEL:-/home/Reference/corigami_data/model_weights/corigami_base.ckpt}
 ATAC=${ATAC:-"$PWD/out_maxatac_prepare/${SAMPLE}_IS_slop20_RP20M.bw"}
 CTCF=${CTCF:-"$PWD/pred_${SAMPLE}_CTCF/${SAMPLE}_CTCF.bw"}  # maxATAC predict output
 
