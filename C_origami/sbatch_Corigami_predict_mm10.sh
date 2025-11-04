@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-#SBATCH -A b1042
+#SBATCH -A alloc
 #SBATCH -p genomics
 #SBATCH -t 08:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=tyler.therron@northwestern.edu
+#SBATCH --mail-user=email
 #SBATCH --output=%x.%j.out
 #SBATCH --mem=40gb
 #SBATCH --job-name=corigami_mm10
@@ -13,11 +13,6 @@
 set -euo pipefail
 
 module load samtools pigz bedtools
-# mamba activate /projects/b1063/TylerT/C_oriGAMZzz
-
-#export PYTHONNOUSERSITE=1
-#unset PYTHONPATH
-
-
+# mamba activate env
 # Pass through any CLI args to the runner
 ./Corigami_predict_mm10.sh "$@"
