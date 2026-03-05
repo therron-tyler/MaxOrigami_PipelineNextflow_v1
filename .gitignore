@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Nextflow / pipelines
+.nextflow/
+work/
+results/
+Results/
+*.log
+
+# Misc
+*.tmp
